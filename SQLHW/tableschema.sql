@@ -5,11 +5,11 @@
 );
 
 CREATE TABLE dept_emp (
-    id SERIAL,
     emp_no integer   NOT NULL,
     dept_no varchar(4)   NOT NULL,
     from_date date   NOT NULL,
     to_date date   NOT NULL,
+    id SERIAL,
     PRIMARY KEY (id)
 );
 
