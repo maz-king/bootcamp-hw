@@ -12,10 +12,8 @@ function handleSubmit() {
     var userdate = d3.select("#datetime").property("value");
     console.log(userdate);
 
-    filterData = tableData.filter((row) => row.datetime === userdate)
-  
-    // clear the input value
-    // d3.select("#datetime").node().value = "";
+    //filter
+    filtered = tableData.filter((row) => row.datetime === userdate);
   
     // Build the table
     buildTable(tableData);
@@ -23,13 +21,13 @@ function handleSubmit() {
 
 
 // function to build table
-function buildTable(tableData) {
-    //tbody.text("");
-    data.forEach((row) => {
-        var row = tbody.append("tr");
-        Object.entries(row).forEach(([key, value]) => {
-          var cell = row.append("td");
-          cell.text(value);
+function buildTable(data) {
+    tbody.text("");
+    data.forEach((uforow) => {
+        var tablerow = tbody.append("tr");
+        Object.entries(uforow).forEach((value) => {
+        var cell = tablerow.append("td");
+        cell.text(value);
         });
     });
 }
