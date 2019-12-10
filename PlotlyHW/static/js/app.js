@@ -78,6 +78,7 @@ function buildCharts(sample) {
     Plotly.plot("pie", pie, pielayout);
 
     });
+  });
 
 function init() {
   // Grab a reference to the dropdown select element
@@ -107,3 +108,4 @@ function optionChanged(newSample) {
 
 // Initialize the dashboard
 init();
+}
